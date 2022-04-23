@@ -1,0 +1,28 @@
+{
+    "name": "radic/composer-exclude-classmap-plugin",
+    "description": "Merges 'autoload.exclude-classmap' from vendor packages into the root composer at runtime. Useful for overriding php classes of other packages. Compatible with wikimedia/composer-merge-plugin packages aswell.",
+    "keywords": ["classmap","exclude","autoload","override"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robin Radic",
+            "email": "rradic@hotmail.com",
+            "homepage": "https://gitub.com/robinradic"
+        }
+    ],
+    "type": "composer-plugin",
+    "require": {
+        "composer-plugin-api": "^2.0"
+    },
+    "require-dev": {
+        "composer/composer": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Radic\\ComposerExcludeClassmapPlugin\\": "src"
+        }
+    },
+    "extra": {
+        "class": "Radic\\ComposerExcludeClassmapPlugin\\ExcludeClassmapPlugin"
+    }
+}
